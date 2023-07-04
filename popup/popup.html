@@ -7,7 +7,19 @@
   </head>
 
   <body>
-    <div id="auth" class="hidden"></div>
+    <form id="auth" class="hidden">
+      <h5>Todoist Auth:</h5>
+      <input
+        type="text"
+        autocomplete="off"
+        id="api"
+        name="api"
+        class="input-box"
+        placeholder="Todoist ApiToken"
+      />
+      <button class="button other-text">PROCEED</button>
+      <p>Tip: ApiToken is in integration->developer tab</p>
+    </form>
 
     <div id="main" class="content">
       <nav id="nav">
@@ -19,8 +31,8 @@
           <button class="button singleline">LINK IT</button>
           <button class="button doubleline">SHARE A THOUGHT</button>
         </div>
-        <div id="link"></div>
-        <div id="thought"></div>
+        <form id="link"></form>
+        <form id="thought"></form>
       </main>
     </div>
 
@@ -32,20 +44,6 @@
     </div>
 
     <div id="popup-content" class="hidden">
-      <div id="apikey" class="hidden">
-        <input
-          type="password"
-          autocomplete="off"
-          id="api"
-          name="api"
-          class="box"
-          placeholder="Todoist ApiToken"
-        />
-        <button id="proceedbutton">
-          <p class="singleline" id="proceed">PROCEED</p>
-        </button>
-      </div>
-
       <div class="hidden" id="link">
         <textarea
           name="link"
