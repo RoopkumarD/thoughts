@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
 
 html,
 body {
@@ -14,10 +14,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-#main {
-  border: 2px solid red;
 }
 
 #nav {
@@ -52,6 +48,7 @@ body {
 
 main {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 #home {
@@ -63,7 +60,6 @@ main {
 }
 
 #auth {
-  border: 2px solid red;
   gap: 0.7rem;
 }
 
@@ -126,10 +122,14 @@ button:active {
   font-size: 1.5rem;
 }
 
+.sending {
+  gap: 1rem;
+}
+
 .input-box {
   width: 12rem;
   height: 2rem;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: #080b21;
   border-radius: 1px;
   border: thin;
   padding: 3px 5px;
@@ -140,34 +140,47 @@ button:active {
 }
 
 .box {
-  width: 150px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: #080b21;
   border-radius: 1px;
   border: thin;
-  padding: 2px 5px;
-  font-size: 15px;
+  padding: 0.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: white;
   text-shadow: 0 0 1px white;
   resize: vertical;
 }
 
+#linkinput {
+  word-break: break-all;
+}
+
+#previous {
+  gap: 0.8rem;
+}
+
+.written > p {
+  margin: 0;
+  padding: 0;
+}
+
+.written > a {
+  font-size: 1rem;
+}
+
 .written {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  width: 180px;
-  padding: 2px 2px;
-  font-size: 20px;
-  text-align: center;
+  width: 13rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  text-align: left;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: #080b21;
   border-radius: 1px;
   border: thin;
   color: white;
   text-shadow: 0 0 1px white;
-  display: flex;
-  flex-direction: column;
 }
 
 textarea:focus {
@@ -191,8 +204,8 @@ input:focus {
   outline: none;
 }
 
-#loader {
-  border: 5px solid #080b21;
+#loading {
+  border: 10px solid #080b21;
   border-radius: 50%;
   border-top: 5px solid white;
   width: 100px;
@@ -201,11 +214,16 @@ input:focus {
   animation: spin 2s linear infinite;
 }
 
+#error-content {
+  padding: 1rem;
+}
+
 #pta,
 #error-message {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 1rem;
   color: white;
   text-shadow: 0 0 1px white;
 }
