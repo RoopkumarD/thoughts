@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div id="popup-content">
+      <img src="logo.svg" alt="logo" />
+
+      <span class="material-symbols-outlined hidden" id="back">
+        arrow_back
+      </span>
+
+      <div id="loader" class="hidden"></div>
+
+      <div id="apikey" class="hidden">
+        <input
+          type="password"
+          autocomplete="off"
+          id="api"
+          name="api"
+          class="box"
+          placeholder="Todoist ApiToken"
+        />
+        <button id="proceedbutton">
+          <p class="singleline" id="proceed">PROCEED</p>
+        </button>
+      </div>
+
+      <div class="hidden" id="initial">
+        <button id="sharedbutton">
+          <p class="doubleline">SHARED</p>
+          <p class="doubleline">CONTENT</p>
+        </button>
+        <button id="sendbutton"><p class="singleline">SEND</p></button>
+      </div>
+
+      <div class="hidden" id="send">
+        <button id="linkbutton">
+          <p class="singleline" id="linkit">LINK IT</p>
+        </button>
+        <button id="textbutton">
+          <p class="doubleline">SHARE A</p>
+          <p class="doubleline">THOUGHT</p>
+        </button>
+      </div>
+
+      <div class="hidden" id="link">
+        <textarea
+          name="link"
+          placeholder="LINK"
+          autocomplete="off"
+          class="box"
+          id="linkinput"
+        ></textarea>
+
+        <textarea
+          name="description"
+          placeholder="DESCRIPTION"
+          autocomplete="off"
+          style="height: 39px"
+          class="box"
+          id="descriptioninput"
+        ></textarea>
+
+        <button class="senditbutton" id="linksendbutton">
+          <p class="singleline" id="sendit">SEND IT</p>
+        </button>
+      </div>
+
+      <div class="hidden" id="text">
+        <textarea
+          name="text"
+          placeholder="TEXT"
+          autocomplete="off"
+          style="height: 60px"
+          class="box"
+          id="textinput"
+        ></textarea>
+
+        <button class="senditbutton" id="textsendbutton">
+          <p class="singleline" id="sendit">SEND IT</p>
+        </button>
+      </div>
+
+      <div
+        class="hidden"
+        id="shared"
+        style="overflow: auto; height: 300px"
+      ></div>
+    </div>
+
+    <div id="error-content" class="hidden">
+      <p id="error-message"></p>
+      <p id="pta">Please Try Again.</p>
+    </div>
+  </body>
+</html>

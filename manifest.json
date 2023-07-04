@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "TSTL",
+	"version": "1.1",
+
+	"description": "This browser extension enables easy sharing of text and links between your computer and Android device. Powered by Todoist app, all shared links and text are automatically synced to your Todoist account, making it easy to manage and access them on any device. With this extension, you can quickly send links and text from your computer to your phone or vice versa, without the need for additional apps or services",
+
+	"icons": {
+		"48": "icons/official logo48-tstl.png",
+		"96": "icons/official logo96-tstl.png"
+	},
+
+	"permissions": [
+		"tabs", "storage"
+	],
+
+	"browser_action": {
+		"default_icon": {
+			"32": "icons/official logo32-tstl.png"
+		},
+		"default_title": "TSTL",
+		"default_popup": "popup/popup.html"
+	}
+}
