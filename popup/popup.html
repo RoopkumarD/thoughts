@@ -28,7 +28,7 @@
       </nav>
 
       <main>
-        <div id="home" class="content">
+        <div id="home" class="hidden">
           <button class="button singleline">LINK IT</button>
           <button class="button doubleline">SHARE A THOUGHT</button>
         </div>
@@ -62,7 +62,7 @@
             rows="7"
             cols="19"
             name="text"
-            placeholder="TEXT"
+            placeholder="TEXT..."
             autocomplete="off"
             class="box"
             id="textinput"
@@ -71,7 +71,11 @@
           <button class="button other-text">SEND IT</button>
         </form>
 
-        <div id="previous" style="overflow: auto; height: 300px" class="hidden">
+        <div
+          id="previous"
+          style="overflow: auto; height: 300px"
+          class="content"
+        >
           <div class="written"><p>Hello I am under the water</p></div>
           <div class="written">
             <a href="#">This is the link</a>
@@ -88,7 +92,9 @@
       </main>
     </div>
 
-    <div id="loading" class="hidden"></div>
+    <div id="loader" class="hidden">
+      <div id="loading"></div>
+    </div>
 
     <div id="error-content" class="hidden">
       <p id="error-message">
