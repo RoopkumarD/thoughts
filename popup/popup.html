@@ -7,15 +7,31 @@
   </head>
 
   <body>
-    <div id="popup-content">
-      <img src="logo.svg" alt="logo" />
+    <div id="auth" class="hidden"></div>
 
-      <span class="material-symbols-outlined hidden" id="back">
-        arrow_back
-      </span>
+    <div id="main" class="content">
+      <nav id="nav">
+        <button id="nav-button" class="button">Back</button>
+        <p>thoughts</p>
+      </nav>
+      <main>
+        <div id="home" class="hidden">
+          <button class="button singleline">LINK IT</button>
+          <button class="button doubleline">SHARE A THOUGHT</button>
+        </div>
+        <div id="link"></div>
+        <div id="thought"></div>
+      </main>
+    </div>
 
-      <div id="loader" class="hidden"></div>
+    <div id="loading" class="hidden"></div>
 
+    <div id="error-content" class="hidden">
+      <p id="error-message"></p>
+      <p id="pta">Please Try Again.</p>
+    </div>
+
+    <div id="popup-content" class="hidden">
       <div id="apikey" class="hidden">
         <input
           type="password"
@@ -27,24 +43,6 @@
         />
         <button id="proceedbutton">
           <p class="singleline" id="proceed">PROCEED</p>
-        </button>
-      </div>
-
-      <div class="hidden" id="initial">
-        <button id="sharedbutton">
-          <p class="doubleline">SHARED</p>
-          <p class="doubleline">CONTENT</p>
-        </button>
-        <button id="sendbutton"><p class="singleline">SEND</p></button>
-      </div>
-
-      <div class="hidden" id="send">
-        <button id="linkbutton">
-          <p class="singleline" id="linkit">LINK IT</p>
-        </button>
-        <button id="textbutton">
-          <p class="doubleline">SHARE A</p>
-          <p class="doubleline">THOUGHT</p>
         </button>
       </div>
 
