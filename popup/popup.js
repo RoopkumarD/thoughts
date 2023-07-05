@@ -1,6 +1,7 @@
 currentWindow = "";
 
 window.addEventListener("load", () => {
+  // popupBorder();
   start();
   const navButton = document.getElementById("nav-button");
 
@@ -35,6 +36,13 @@ window.addEventListener("load", () => {
     sendThought();
   });
 });
+
+// async function popupBorder() {
+//   let val = await browser.theme.getCurrent();
+//   val.colors.popup_border = "transparent";
+//   await browser.theme.update(val);
+//   return;
+// }
 
 async function start() {
   await browser.storage.local.get("token").then((value) => {
