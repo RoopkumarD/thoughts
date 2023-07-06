@@ -1,7 +1,6 @@
 currentWindow = "";
 
 window.addEventListener("load", () => {
-  // popupBorder();
   start();
   const navButton = document.getElementById("nav-button");
 
@@ -37,6 +36,7 @@ window.addEventListener("load", () => {
   });
 });
 
+/* Wanted to change popup border */
 // async function popupBorder() {
 //   let val = await browser.theme.getCurrent();
 //   val.colors.popup_border = "transparent";
@@ -199,6 +199,12 @@ async function previous() {
         currentWindow = "previous";
         document.getElementById("nav-button").textContent = "Back";
 
+        let p = document.createElement("p");
+
+        p.textContent = "No thoughts logged";
+
+        document.getElementById("previous").appendChild(p);
+
         document
           .getElementById("nav-button")
           .classList.replace("hidden", "show");
@@ -323,6 +329,9 @@ async function sendLink() {
   )
     .then((response) => response.json())
     .then(() => {
+      document.getElementById("linkinput").value = "";
+      document.getElementById("descriptioninput").value = "";
+
       document.getElementById("nav-button").textContent = "Previous";
       document.getElementById("loader").classList.replace("content", "hidden");
       document.getElementById("main").classList.replace("hidden", "content");
@@ -330,6 +339,9 @@ async function sendLink() {
       return;
     })
     .catch(() => {
+      document.getElementById("linkinput").value = "";
+      document.getElementById("descriptioninput").value = "";
+
       errormessage(
         "Oops, we encountered an error while trying to share this link",
       );
@@ -374,6 +386,7 @@ async function sendThought() {
   )
     .then((response) => response.json())
     .then(() => {
+      document.getElementById("textinput").value = "";
       document.getElementById("nav-button").textContent = "Previous";
       document.getElementById("loader").classList.replace("content", "hidden");
       document.getElementById("main").classList.replace("hidden", "content");
@@ -381,6 +394,7 @@ async function sendThought() {
       return;
     })
     .catch(() => {
+      document.getElementById("textinput").value = "";
       errormessage(
         "Oops, there was an error while trying to share your message",
       );
