@@ -1,8 +1,8 @@
-thoughts - a firefox extension
+## thoughts - a firefox extension
 
 Video Demo: 
 
-Description:
+#### Description:
 
 Introducing 'thoughts': Your Safe Haven for your Spontaneous Thoughts 
 
