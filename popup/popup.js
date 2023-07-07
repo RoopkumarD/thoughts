@@ -72,7 +72,7 @@ async function authProceed() {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((val) => {
-        if (val.name === "thoughts by rkad") {
+        if (val.name === "thoughts extension") {
           valueInProject = true;
           const project_id = val.id;
 
@@ -112,7 +112,7 @@ async function authProceed() {
       Authorization: `Bearer ${apiToken}`,
     },
     body: JSON.stringify({
-      name: "thoughts by rkad",
+      name: "thoughts extension",
     }),
   })
     .then((response) => response.json())
