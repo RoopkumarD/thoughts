@@ -1,6 +1,6 @@
 ## thoughts - a firefox extension
 
-Video Demo: 
+Video Demo: https://youtu.be/gOKrNyDODBY
 
 #### Description:
 
